@@ -34,17 +34,13 @@
   .home-main{
     position: relative;
     z-index: 2;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-
-
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
     .home-title{
-      
       color: #fff;
-      margin-top: -240px;
-    
+        margin-top: -240px;
+        padding-left: 40px;
 
       h1{
         font-size: 96px;
@@ -157,6 +153,8 @@
       min-width: 150px;
       max-width: 200px;
       margin-bottom: 0;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
     }
   }
 }
@@ -165,18 +163,30 @@
   .home-container{
     .home-section{
       .home-main{
-        justify-content: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 0px;
         .home-title{
-          max-width: 900px;
+          display: flex;
+          justify-content: center;
+          margin-right: 30px;
+          margin-left: 0;
           h1{
             font-size: 36px;
           }
         }
         .links{
-          
+      
+          display: flex;
+          justify-content: center; 
+          margin-right: 0; 
+          ul {
+            display: flex; 
+            gap: 15px; 
+            padding: 0; 
+          }
         }
       }
     }
   }
-
 }

@@ -13,7 +13,7 @@ export default function Home() {
             <h1>Sushi Sensation</h1>
           </div>
           <div className="links">
-            <ul className=' flex flex-row justify-between gap-2 flex-wrap'>
+            <ul className='grid grid-cols-3'>
               <li>
                 <a href="https://instagram.com">
                   <Image src='/icons/insta.svg' alt='instagram' width={45} height={45} />

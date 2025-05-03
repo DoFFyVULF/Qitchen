@@ -54,6 +54,7 @@ body {
 	line-height: 1;
   font-family: Dosis;
   background-color: #000;
+  overflow-x: hidden;
 }
 menu, ol, ul {
 	list-style: none;

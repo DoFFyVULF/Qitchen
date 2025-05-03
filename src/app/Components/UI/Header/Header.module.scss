@@ -127,8 +127,12 @@
 
 
       @media (max-width:620px) {
+        .header{
+          display: flex;
+          justify-content: center;
+        }
         .container{
-          margin-left: 30px;
+          margin: 0;
           
           & .desktopMenu{
             display: none;
