@@ -33,13 +33,14 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 main, menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, span {
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+  color: antiquewhite;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -51,10 +52,13 @@ footer, header, hgroup, main, menu, nav, section {
     display: none;
 }
 body {
+  
+  padding: 0 20px;
 	line-height: 1;
   font-family: Dosis;
   background-color: #000;
   overflow-x: hidden;
+  color: antiquewhite;
 }
 menu, ol, ul {
 	list-style: none;
@@ -73,5 +77,9 @@ table {
 }
 a{
   text-decoration: none;
-  color: #ffffff;
+  color: antiquewhite;
+}
+
+html{
+  scroll-behavior: smooth;
 }

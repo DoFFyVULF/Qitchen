@@ -13,7 +13,7 @@ export default function Home() {
             <h1>Sushi Sensation</h1>
           </div>
           <div className="links">
-            <ul className='grid grid-cols-3'>
+            <ul>
               <li>
                 <a href="https://instagram.com">
                   <Image src='/icons/insta.svg' alt='instagram' width={45} height={45} />
@@ -35,23 +35,30 @@ export default function Home() {
       </section>
 
       <aside className="home-aside">
-        <a href="/menu">
-          <div className="home-card">
-            <Image src='/aside/Menu.png' width={300} height={400} alt='Menu' />
+        <a href="/menu" className="home-card">
+          <div className="card-image">
+            <img src="/aside/Menu.png" alt="Menu" />
+          </div>
+          <div className="card-content">
             <span>Menu</span>
           </div>
         </a>
-        <a href="/reservation">
-          <div className="home-card">
-            <Image src='/aside/Reserv.png' width={300} height={400} alt='Reservation' />
+        <a href="/reservation" className="home-card">
+          <div className="card-image">
+            <img src="/aside/Reserv.png" alt="Reservation" />
+          </div>
+          <div className="card-content">
             <span>Reservation</span>
           </div>
         </a>
-        <a href="/about">
-          <div className="home-card">
-            <Image src='/aside/About.png' width={300} height={400} alt='About' />
+        <a href="/about" className="home-card">
+          <div className="card-image">
+            <img src="/aside/About.png" alt="About" />
+          </div>
+          <div className="card-content">
             <span>Our Restaurant</span>
-          </div></a>
+          </div>
+        </a>
       </aside>
     </div>
   );
