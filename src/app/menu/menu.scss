@@ -91,6 +91,7 @@
                 display: flex;
                 flex-direction: column;
                 min-width: 0;
+                
                 padding: 30px;
 
                 .food-title {
@@ -98,6 +99,7 @@
                     letter-spacing: 2px;
                 }
                 .food-desc {
+                    margin-top: 10px;
                     letter-spacing: 3px;
                     color:darkgrey;
                 }

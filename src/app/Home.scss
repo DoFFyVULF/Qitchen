@@ -6,7 +6,7 @@
 }
 
 .home-section {
-  flex: 0 0 75%;
+  flex: 0 0 80%;
   position: relative;
 
   .video-container {
@@ -31,7 +31,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.1);
   }
-  
+
   .home-main {
     position: relative; // важно для абсолютного позиционирования дочерних элементов
     z-index: 2;
@@ -39,67 +39,64 @@
     grid-template-columns: 1fr 12fr;
 
     .home-title {
-        color: #fff;
-        margin-top: -240px;
-        padding-left: 40px;
+      color: #fff;
+      margin-top: -240px;
+      padding-left: 40px;
 
+      h1 {
+        font-size: 96px;
+        letter-spacing: 0.4rem;
+        text-transform: uppercase;
+      }
+
+      @media (max-width: 965px) {
+        margin-top: -150px;
+        margin-left: 40px;
         h1 {
-            font-size: 96px;
-            letter-spacing: 0.4rem;
-            text-transform: uppercase;
+          font-size: 56px;
         }
-
-        @media (max-width: 965px) {
-            margin-top: -150px;
-            margin-left: 40px;
-            h1 {
-                font-size: 56px;
-            }
-        }
+      }
     }
 
     .links {
-        position: absolute;
-        top: 50%;                  // вертикальный центр
-        right: 0;                  // прижатие к правому краю
-        transform: translateY(-50%); // точное вертикальное центрирование
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      display: flex;
+      margin-top: -35px;
+      margin-right: 10px;
+      ul {
         display: flex;
-        margin-top: -35px;
-        margin-right: 10px;
-        ul {
-            display: flex;
-            gap: 20px;
+        gap: 20px;
 
-            li {
-                width: 50px;
-                height: 50px;
-                border: 1px solid rgba(255, 252, 252, 0.3);
-                border-radius: 50%;
-                padding: 10px;
-                transition: all 0.3s ease-in-out;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            li:hover {
-                transform: scale(1.06);
-                border: 1px solid rgba(255, 252, 252, 0.7);
-            }
+        li {
+          width: 50px;
+          height: 50px;
+          border: 1px solid rgba(255, 252, 252, 0.3);
+          border-radius: 50%;
+          padding: 10px;
+          transition: all 0.3s ease-in-out;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
 
-        @media (max-width: 845px) {
-            display: none;
+        li:hover {
+          transform: scale(1.06);
+          border: 1px solid rgba(255, 252, 252, 0.7);
         }
+      }
+
+      @media (max-width: 845px) {
+        display: none;
+      }
     }
-}
-
-
-
+  }
 }
 
 .home-aside {
-  flex: 0 0 25%;
+  flex: 0 0 20%;
   max-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -108,15 +105,17 @@
   gap: 30px;
   background: rgba(0, 0, 0, 0.7);
   padding-left: 15px;
+  margin-top: -23px;
 
   .home-card {
-    opacity: .8;
+    opacity: 0.8;
     transition: all 0.3s ease-in-out;
+
     .card-image {
       position: relative;
       z-index: 9;
-      max-width: 300px;
-      height: auto;
+      max-width: 330px;
+      height: 100%;
       img {
         object-fit: cover;
         border-radius: 15px;
@@ -131,20 +130,28 @@
       margin-top: -45px;
       z-index: 22;
       border-top-left-radius: 40%;
-    
-     
-      span{
+
+      span {
         padding: 5px;
       }
     }
   }
 
-  .home-card:hover{
+  .home-card:hover {
     opacity: 1;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
+  .home-section {
+    flex: 0 0 65%;
+  }
+  .home-aside {
+    flex: 0 0 35%;
+  }
+}
+
+@media (max-width: 845px) {
   .home-container {
     flex-direction: column;
   }
@@ -158,12 +165,13 @@
   }
 
   .home-aside {
-    flex: 0 0 auto;
+    flex: 0 0 20%;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
-    padding: 15px;
+    padding-left: 0;
+    margin-top: 30px;
 
     .home-card {
       flex: 1;
