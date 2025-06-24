@@ -75,7 +75,7 @@ export default function Reservation() {
                 </form>
             </div>
         </div>
-        ></AnimatedContent >
+        </AnimatedContent >
        
     )
 }
