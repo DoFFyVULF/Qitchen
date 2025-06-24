@@ -38,7 +38,7 @@ export default function Header() {
             <li><a href="/reservation" onClick={toggleMenu}>Reservation</a></li>
             <li><a href="/about" onClick={toggleMenu}>About</a></li>
             <li><a href="/contact" onClick={toggleMenu}>Contact</a></li>
-            <li><a href="/book" onClick={toggleMenu}>Blog</a></li>
+            <li><a href="/blog" onClick={toggleMenu}>Blog</a></li>
           </ul>
         </div>
       </div>
