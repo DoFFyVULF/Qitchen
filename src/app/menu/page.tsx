@@ -1,6 +1,6 @@
 import Image from "next/image"
 import "../menu/menu.scss"
-
+import AnimatedContent from "@/components/animations/AnimatedContent ";
 export default function Menu() {
 
 
@@ -169,7 +169,19 @@ export default function Menu() {
 
 
     return (
-        <main>
+        <AnimatedContent
+  distance={150}
+  direction="horizontal"
+  reverse={false}
+  duration={1.5}
+  ease="power3.out"
+  initialOpacity={0.2}
+  animateOpacity
+  scale={1.0}
+  threshold={0}
+  delay={0}
+  >
+      <main>
             <section className="menu-wrapper">
                 <div className="menu-title">
                     <h4>Menu</h4>
@@ -202,5 +214,8 @@ export default function Menu() {
                 </div>
             </section>
         </main>
+
+  </AnimatedContent>
+      
     )
 }

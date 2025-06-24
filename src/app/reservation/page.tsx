@@ -1,4 +1,5 @@
 "use client"
+import AnimatedContent from "@/components/animations/AnimatedContent ";
 import { TimeInput } from "@heroui/date-input";
 import { Time } from "@internationalized/date";
 import * as React from "react"
@@ -19,7 +20,19 @@ export default function Reservation() {
     const [date, setDate] = React.useState<Date>()
 
     return (
-        <div className="reservation-wrapper">
+        <AnimatedContent
+  distance={150}
+  direction="horizontal"
+  reverse={false}
+  duration={1.5}
+  ease="power3.out"
+  initialOpacity={0.2}
+  animateOpacity
+  scale={1.0}
+  threshold={0}
+  delay={0}
+  >
+ <div className="reservation-wrapper">
             <div className="reservation-title">
                 <h4>Book a table</h4>
             </div>
@@ -62,5 +75,7 @@ export default function Reservation() {
                 </form>
             </div>
         </div>
+        ></AnimatedContent >
+       
     )
 }

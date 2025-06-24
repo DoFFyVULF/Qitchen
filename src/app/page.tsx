@@ -1,9 +1,22 @@
 import './Home.scss';
+import AnimatedContent from '@/components/animations/AnimatedContent ';
 import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="home-container">
+    <AnimatedContent
+  distance={150}
+  direction="horizontal"
+  reverse={false}
+  duration={1.5}
+  ease="power3.out"
+  initialOpacity={0.2}
+  animateOpacity
+  scale={1.0}
+  threshold={0}
+  delay={0}
+>
+  <div className="home-container">
       <section className="home-section">
         <div className="video-container">
           <video src="/Video/Home.mp4" autoPlay muted loop playsInline></video>
@@ -61,5 +74,6 @@ export default function Home() {
         </a>
       </aside>
     </div>
+</AnimatedContent>
   );
 }
